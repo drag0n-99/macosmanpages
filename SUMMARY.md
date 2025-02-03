@@ -1,11 +1,9 @@
 # Table of contents
 
-* [README](README.md)
-
 ## About
 
-* [Test2\_In\_About](about/test2_in_about.md)
 * [How Are The Man Pages Collected](about/how-are-the-man-pages-collected.md)
+* [Test2 In About](about/test2_in_about.md)
 
 ## Basics
 
@@ -23,3 +21,4 @@
 * [Quickstart](getting-started/quickstart.md)
 * [Test Page](getting-started/test-page.md)
 * [Test2](getting-started/test2.md)
+

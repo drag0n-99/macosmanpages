@@ -29,9 +29,11 @@ def generate_summary():
                 f.write(f"## {section}\n\n")  # Write section title
             
             for file in files:
-                title = os.path.basename(file).replace(".md", "").replace("-", " ").title()
+                title = os.path.basename(file).replace(".md", "").replace("-", " ")
+                title = title.replace("_", " ")  # Handle underscores like in the left example
+                title = title.title()  # Capitalize title as per example
                 f.write(f"* [{title}]({file})\n")
-
+            
             f.write("\n")  # Spacing between sections
 
 if __name__ == "__main__":
