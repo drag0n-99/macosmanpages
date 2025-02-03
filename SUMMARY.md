@@ -1,9 +1,11 @@
 # Table of contents
 
+* [README](README.md)
+
 ## About
 
+* [Test2\_In\_About](about/test2_in_about.md)
 * [How Are The Man Pages Collected](about/how-are-the-man-pages-collected.md)
-* [Test2_In_About](about/test2_in_about.md)
 
 ## Basics
 
@@ -11,7 +13,6 @@
 * [Images And Media](basics/images-and-media.md)
 * [Integrations](basics/integrations.md)
 * [Interactive Blocks](basics/interactive-blocks.md)
-* [Markdown](basics/markdown.md)
 * [Openapi](basics/openapi.md)
 
 ## Getting Started
@@ -22,4 +23,3 @@
 * [Quickstart](getting-started/quickstart.md)
 * [Test Page](getting-started/test-page.md)
 * [Test2](getting-started/test2.md)
-
