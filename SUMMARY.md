@@ -1,25 +1,25 @@
 # Table of contents
 
-* [Welcome](README.md)
-* [Page](page.md)
+## About
 
-## Getting Started
-
-* [Quickstart](getting-started/quickstart.md)
-* [Publish your docs](getting-started/publish-your-docs.md)
-* [test page](getting-started/test-page.md)
-* [Page 1](getting-started/page-1.md)
-* [Page 2](getting-started/page-2.md)
+* [How Are The Man Pages Collected](about/how-are-the-man-pages-collected.md)
+* [Test2_In_About](about/test2_in_about.md)
 
 ## Basics
 
 * [Editor](basics/editor.md)
-* [Markdown](basics/markdown.md)
-* [Images & media](basics/images-and-media.md)
-* [Interactive blocks](basics/interactive-blocks.md)
-* [OpenAPI](basics/openapi.md)
+* [Images And Media](basics/images-and-media.md)
 * [Integrations](basics/integrations.md)
+* [Interactive Blocks](basics/interactive-blocks.md)
+* [Markdown](basics/markdown.md)
+* [Openapi](basics/openapi.md)
 
-## about
+## Getting Started
 
-* [How are the man pages collected?](about/how-are-the-man-pages-collected.md)
+* [Page 1](getting-started/page-1.md)
+* [Page 2](getting-started/page-2.md)
+* [Publish Your Docs](getting-started/publish-your-docs.md)
+* [Quickstart](getting-started/quickstart.md)
+* [Test Page](getting-started/test-page.md)
+* [Test2](getting-started/test2.md)
+

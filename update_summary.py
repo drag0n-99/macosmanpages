@@ -1,17 +1,39 @@
 import os
 
-def generate_summary(root_dir):
-    summary_file = os.path.join(root_dir, "SUMMARY.md")
-    with open(summary_file, "w") as f:
-        f.write("# Table of contents\n\n")
-        for dirpath, _, filenames in os.walk(root_dir):
-            rel_dir = os.path.relpath(dirpath, root_dir)
-            if rel_dir == ".":
-                rel_dir = ""
-            for filename in filenames:
-                if filename.endswith(".md") and filename != "SUMMARY.md":
-                    filepath = os.path.join(rel_dir, filename)
-                    title = filename.replace(".md", "").replace("-", " ").title()
-                    f.write(f"* [{title}]({filepath})\n")
+ROOT_DIR = "."
+SUMMARY_FILE = os.path.join(ROOT_DIR, "SUMMARY.md")
 
-generate_summary(".")
+def generate_summary():
+    sections = {}
+
+    # Scan for markdown files
+    for dirpath, _, filenames in sorted(os.walk(ROOT_DIR)):
+        rel_dir = os.path.relpath(dirpath, ROOT_DIR)
+        
+        # Ignore hidden folders and GitBook internal files
+        if rel_dir.startswith(".") or rel_dir in [".git", "node_modules"]:
+            continue
+        
+        md_files = sorted([f for f in filenames if f.endswith(".md") and f != "SUMMARY.md"])
+
+        if md_files:
+            section_name = rel_dir.replace("-", " ").title()  # Convert dir name to title case
+            sections[section_name] = [os.path.join(rel_dir, f) for f in md_files]
+
+    # Write new SUMMARY.md
+    with open(SUMMARY_FILE, "w") as f:
+        f.write("# Table of contents\n\n")
+
+        for section, files in sections.items():
+            if section != ".":
+                f.write(f"## {section}\n\n")  # Write section title
+            
+            for file in files:
+                title = os.path.basename(file).replace(".md", "").replace("-", " ").title()
+                f.write(f"* [{title}]({file})\n")
+
+            f.write("\n")  # Spacing between sections
+
+if __name__ == "__main__":
+    generate_summary()
+    print("SUMMARY.md has been updated!")
